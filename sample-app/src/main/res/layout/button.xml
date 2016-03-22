@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:id="@+id/button"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:padding="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        tools:text="Sample Button"/>
