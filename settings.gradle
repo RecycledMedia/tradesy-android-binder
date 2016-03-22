@@ -1,0 +1,1 @@
+include ':binder-recyclerview-v7', ':sample-app'
