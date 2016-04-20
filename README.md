@@ -79,7 +79,7 @@ Download
 --------
 
 ```groovy
-compile 'com.tradesy.binder:binder-recyclerview-v7:0.1.0'
+compile 'com.tradesy.binder:binder-recyclerview-v7:0.1.1'
 ```
 
 License
