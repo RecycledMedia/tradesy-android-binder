@@ -22,12 +22,14 @@ public class ArrayItemBinderAdapter extends ItemBinderAdapter {
     public void set(Collection<?> items) {
         synchronized (lock) {
             int count = this.items.size();
+            int newCount = items.size();
             this.items = new ArrayList<>(items);
-            if (count > 0) {
-                notifyItemRangeRemoved(0, count);
-            }
-            if (this.items.size() > 0) {
-                notifyItemRangeInserted(0, this.items.size());
+            if (count > newCount) {
+                notifyItemRangeChanged(0, newCount);
+                notifyItemRangeRemoved(newCount, count - newCount);
+            } else {
+                notifyItemRangeChanged(0, count);
+                notifyItemRangeInserted(count, newCount - count);
             }
         }
     }
